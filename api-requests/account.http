@@ -1,0 +1,21 @@
+PUT http://localhost:8072
+Content-Type: application/json
+
+{
+    "accountNumber": 987678763,
+    "accountType": "Savings",
+    "accountBalance": 20994.4,
+    "customer": 4
+}
+###
+POST http://localhost:8072
+Content-Type: application/json
+
+{
+    "accountNumber":6789876783,
+    "customer":4,
+    "accountBalance":20994.4,
+    "accountType":"Savings"
+}
+###
+GET http://localhost:8072

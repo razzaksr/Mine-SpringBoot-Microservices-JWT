@@ -1,0 +1,26 @@
+PUT http://localhost:8071
+Content-Type: application/json
+
+{
+    "customerId":4,
+    "customerName":"Rajiya R",
+    "customerContact":8765678945,
+    "username":"rajiya",
+    "password":"mohamed"
+}
+###
+GET http://localhost:8071/3
+###
+DELETE http://localhost:8071/53
+###
+POST http://localhost:8071
+Content-Type: application/json
+
+{
+    "customerName":"Rajiya r",
+    "customerContact":8765678945,
+    "username":"rajiya",
+    "password":"mohamed"
+}
+###
+GET http://localhost:8071
