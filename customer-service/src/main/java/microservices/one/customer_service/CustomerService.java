@@ -5,11 +5,14 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class CustomerService {
     @Autowired
     private CustomerRepository repository;
+    @Autowired(required = true)
+    private FeignConnector connector;
 
     public Customer create(Customer customer){
         return repository.save(customer);
@@ -18,7 +21,12 @@ public class CustomerService {
         return repository.findById(id);
     }
     public List<Customer> readAll(){
-        return repository.findAll();
+        List<Customer> every = repository.findAll();
+        every.stream().map(obj->{
+            obj.setMyAccounts(connector.receiveAccountsFromService(obj.getCustomerId()));
+            return obj;
+        }).collect(Collectors.toList());
+        return every;
     }
     public void delete(int id){
         repository.deleteById(id);

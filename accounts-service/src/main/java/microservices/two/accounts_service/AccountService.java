@@ -11,6 +11,9 @@ public class AccountService {
     @Autowired
     private AccountRepository repository;
 
+    public List<Account> readByCustomer(int customer){
+        return repository.findAllByCustomer(customer);
+    }
     public void delete(long account){
         repository.deleteById(account);
     }

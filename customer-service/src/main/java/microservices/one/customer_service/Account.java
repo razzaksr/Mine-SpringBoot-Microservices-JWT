@@ -1,13 +1,11 @@
-package microservices.two.accounts_service;
+package microservices.one.customer_service;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 import java.io.Serializable;
 
-@Entity
 public class Account implements Serializable {
-    @Id
     private long accountNumber;
     private String accountType;
     private double accountBalance;

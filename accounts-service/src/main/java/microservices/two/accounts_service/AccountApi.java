@@ -11,6 +11,10 @@ public class AccountApi {
     @Autowired
     private AccountService service;
 
+    @GetMapping("/holder/{customer}")
+    public List<Account> readByCustomerApi(@PathVariable("customer") int customer){
+        return service.readByCustomer(customer);
+    }
     @DeleteMapping("/{account}")
     public void deleteApi(@PathVariable("account") long account){
         service.delete(account);
