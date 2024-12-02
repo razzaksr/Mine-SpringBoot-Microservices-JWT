@@ -1,0 +1,5 @@
+GET http://localhost:8070/accounts/holder/1
+###
+GET http://localhost:8070/accounts/
+###
+GET http://localhost:8070/profile/

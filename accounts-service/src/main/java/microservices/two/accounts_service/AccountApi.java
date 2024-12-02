@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/accounts")
 public class AccountApi {
     @Autowired
     private AccountService service;

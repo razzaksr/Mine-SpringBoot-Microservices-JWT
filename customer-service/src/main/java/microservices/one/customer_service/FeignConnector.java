@@ -9,6 +9,6 @@ import java.util.List;
 //@FeignClient(url = "http://localhost:8072",name = "Feign-Connector")
 @FeignClient(name = "ACCOUNTS-SERVICE")
 public interface FeignConnector {
-    @GetMapping("/holder/{customer}")
+    @GetMapping("/accounts/holder/{customer}")
     List<Account> receiveAccountsFromService(@PathVariable("customer") int customer);
 }

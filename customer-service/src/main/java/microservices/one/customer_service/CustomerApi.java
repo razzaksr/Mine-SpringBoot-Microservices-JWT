@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/profile")
 public class CustomerApi {
     @Autowired
     private CustomerService service;

@@ -1,6 +1,6 @@
-GET http://localhost:8072/holder/4
+GET http://localhost:8072/accounts/holder/4
 ###
-PUT http://localhost:8072
+PUT http://localhost:8072/accounts/
 Content-Type: application/json
 
 {
@@ -10,14 +10,14 @@ Content-Type: application/json
     "customer": 4
 }
 ###
-POST http://localhost:8072
+POST http://localhost:8072/accounts/
 Content-Type: application/json
 
 {
-    "accountNumber":6789876783,
-    "customer":4,
+    "accountNumber":4565456545,
+    "customer":2,
     "accountBalance":20994.4,
     "accountType":"Savings"
 }
 ###
-GET http://localhost:8072
+GET http://localhost:8072/accounts/
