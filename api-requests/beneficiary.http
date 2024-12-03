@@ -1,0 +1,10 @@
+GET http://localhost:8073/payee/
+###
+POST http://localhost:8073/payee/
+Content-Type: application/json
+
+{
+    "beneficiaryAccount":99888773663,
+    "rootAccount":987678763,
+    "beneficiaryName":"Raquib R"
+}

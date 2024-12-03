@@ -4,6 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 public class Account implements Serializable {
@@ -12,6 +13,7 @@ public class Account implements Serializable {
     private String accountType;
     private double accountBalance;
     private int customer;
+    private transient List<Beneficiary> myPayees;
 
     public long getAccountNumber() {
         return accountNumber;
@@ -43,5 +45,13 @@ public class Account implements Serializable {
 
     public void setCustomer(int customer) {
         this.customer = customer;
+    }
+
+    public List<Beneficiary> getMyPayees() {
+        return myPayees;
+    }
+
+    public void setMyPayees(List<Beneficiary> myPayees) {
+        this.myPayees = myPayees;
     }
 }
