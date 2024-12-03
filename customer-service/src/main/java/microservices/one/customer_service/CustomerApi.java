@@ -28,8 +28,8 @@ public class CustomerApi {
     public List<Customer> readAllApi(){
         return service.readAll();
     }
-    @PostMapping("/")
-    public Customer createApi(@RequestBody Customer customer){
-        return service.create(customer);
-    }
+//    @PostMapping("/")
+//    public Customer createApi(@RequestBody Customer customer){
+//        return service.create(customer);
+//    }
 }

@@ -1,3 +1,17 @@
+### Customer with JwtAuthenticated###
+GET http://localhost:8071/profile/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXphayIsImlhdCI6MTczMzI1MzIyMSwiZXhwIjoxNzMzMjUzMzI5fQ.u8CjVadqUc-f1N6tIlb5dfZ7dyiwwu-sCut9iOoU4K4
+###
+GET http://localhost:8070/profile/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJyYXphayIsImlhdCI6MTczMzI1MzIyMSwiZXhwIjoxNzMzMjUzMzI5fQ.u8CjVadqUc-f1N6tIlb5dfZ7dyiwwu-sCut9iOoU4K4
+###
+POST http://localhost:8070/auth/login
+Content-Type: application/json
+
+{
+    "username":"razak",
+    "password":"mohamed"
+}
 ###
 GET http://localhost:8070/payee/
 ###

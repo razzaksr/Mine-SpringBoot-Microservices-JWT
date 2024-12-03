@@ -18,7 +18,12 @@ public class CustomerService {
         return repository.save(customer);
     }
     public Optional<Customer> readOne(int id){
-        return repository.findById(id);
+        Optional<Customer> found = repository.findById(id);
+        found.stream().map(obj->{
+            obj.setMyAccounts(connector.receiveAccountsFromService(obj.getCustomerId()));
+            return obj;
+        }).collect(Collectors.toList());
+        return found;
     }
     public List<Customer> readAll(){
         List<Customer> every = repository.findAll();
